@@ -1,0 +1,84 @@
+/* Updated CSS for a cuter 4x3 grid layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF7DC;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+#sentence-area {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: stretch; /* Ensures equal height */
+    max-width: 800px;
+    margin: auto;
+}
+
+.grid-item {
+    background: #FFD700;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    width: min(20vw, 150px); /* Max 150px but flexible */
+    height: min(25vh, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.grid-item:hover {
+    background: #FFC107;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+#speak-btn, #clear-btn {
+    background: #FF6384;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#speak-btn:hover, #clear-btn:hover {
+    background: #E63950;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
