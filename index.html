@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Powerpuff Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating shapes background -->
+    <div class="bg-shapes">
+        <div class="shape star s1">&#9733;</div>
+        <div class="shape star s2">&#9733;</div>
+        <div class="shape star s3">&#9733;</div>
+        <div class="shape heart s4">&#9829;</div>
+        <div class="shape heart s5">&#9829;</div>
+        <div class="shape star s6">&#9733;</div>
+    </div>
+
+    <div class="calculator">
+        <div class="header">
+            <div class="ppg-eyes">
+                <span class="eye blossom-eye"></span>
+                <span class="eye bubbles-eye"></span>
+                <span class="eye buttercup-eye"></span>
+            </div>
+            <div class="header-title">Powerpuff Calc!</div>
+        </div>
+        <div class="screen">
+            <div class="expression" id="expression"></div>
+            <div class="result" id="display">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn fn" onclick="clearAll()">AC</button>
+            <button class="btn fn" onclick="toggleSign()">+/-</button>
+            <button class="btn fn" onclick="percent()">%</button>
+            <button class="btn op" onclick="setOperator('/')">&#247;</button>
+
+            <button class="btn num" onclick="appendNumber('7')">7</button>
+            <button class="btn num" onclick="appendNumber('8')">8</button>
+            <button class="btn num" onclick="appendNumber('9')">9</button>
+            <button class="btn op" onclick="setOperator('*')">&#215;</button>
+
+            <button class="btn num" onclick="appendNumber('4')">4</button>
+            <button class="btn num" onclick="appendNumber('5')">5</button>
+            <button class="btn num" onclick="appendNumber('6')">6</button>
+            <button class="btn op" onclick="setOperator('-')">&#8722;</button>
+
+            <button class="btn num" onclick="appendNumber('1')">1</button>
+            <button class="btn num" onclick="appendNumber('2')">2</button>
+            <button class="btn num" onclick="appendNumber('3')">3</button>
+            <button class="btn op" onclick="setOperator('+')">+</button>
+
+            <button class="btn num zero" onclick="appendNumber('0')">0</button>
+            <button class="btn num" onclick="appendDecimal()">.</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+        </div>
+        <div class="footer-tag">&#9829; Sugar, Spice & Everything Nice &#9829;</div>
+    </div>
+
+    <!-- Paywall Modal -->
+    <div class="modal-overlay" id="paywall">
+        <div class="modal">
+            <div class="modal-villain">&#128520;</div>
+            <h2 class="modal-title">Mojo Jojo Blocked Your Answer!</h2>
+            <p class="modal-desc">Only the Powerpuff Girls can defeat him... but they need your help!</p>
+            <div class="price-bubble">
+                <span class="price-amount">$9.99</span>
+                <span class="price-sub">/month</span>
+            </div>
+            <ul class="features">
+                <li><span class="check-icon">&#9733;</span> Unlimited superpowered calculations</li>
+                <li><span class="check-icon">&#9733;</span> Unlock the = button</li>
+                <li><span class="check-icon">&#9733;</span> Defeat Mojo Jojo forever</li>
+                <li><span class="check-icon">&#9733;</span> Chemical X math powers</li>
+                <li><span class="check-icon">&#9733;</span> Free DLC: Numbers 0-9</li>
+            </ul>
+            <button class="pay-btn" onclick="redirectToStripe()">
+                &#9733; Save Townsville! &#9733;
+            </button>
+            <button class="close-modal" onclick="closePaywall()">let mojo jojo win...</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
